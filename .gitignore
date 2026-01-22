@@ -3,3 +3,4 @@ node_modules/
 .extension-agent/
 dist/
 python-agent/backend/__pycache__/
+.vscodeignore
