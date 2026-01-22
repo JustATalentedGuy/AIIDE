@@ -1,5 +1,3 @@
-// vscode-extension/src/signalDeriver.ts
-
 import { generateASTFingerprint, sanitizeFingerprint, ASTFingerprint } from './ast/astAnalyzer';
 import { diffAST, classifyRefactor, ASTDiffResult } from './ast/astDiff';
 import { ASTSnapshot, ASTRefactorEvent } from './ast/astSnapshot';

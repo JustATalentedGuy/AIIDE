@@ -1,5 +1,3 @@
-# python-backend/feedback_generator.py
-from typing import Dict, Any
 from schemas import PedagogicalFeedback, FeedbackRequest
 from session_manager import SessionManager
 from signal_processor import SignalProcessor

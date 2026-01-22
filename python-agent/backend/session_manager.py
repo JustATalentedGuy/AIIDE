@@ -1,4 +1,3 @@
-# python-backend/session_manager.py
 from datetime import datetime
 from typing import Dict, List
 from schemas import LearnerProfile

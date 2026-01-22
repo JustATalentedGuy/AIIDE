@@ -1,4 +1,3 @@
-// vscode-extension/src/agentManager.ts
 import * as path from 'path';
 import { spawn } from 'child_process';
 import { BackendClient } from './backend';

@@ -1,5 +1,3 @@
-// vscode-extension/src/extension.ts
-
 import * as vscode from 'vscode';
 import { EventCapture } from './eventCapture';
 import { SignalDeriver } from './signalDeriver';

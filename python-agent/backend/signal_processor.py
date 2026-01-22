@@ -1,4 +1,3 @@
-# python-backend/signal_processor.py
 from typing import Dict, Any
 from schemas import SessionSignals
 

@@ -1,5 +1,3 @@
-// vscode-extension/src/problemContext.ts
-
 export interface ProblemContext {
   title: string | null;
   constraints: string | null;

@@ -1,5 +1,3 @@
-// vscode-extension/src/ast/astAnalyzer.ts
-
 import * as ts from 'typescript';
 
 export type ASTFingerprint = Record<string, number>;
@@ -31,8 +29,6 @@ export function generateASTFingerprint(code: string): ASTFingerprint {
     visit(sourceFile);
     return fingerprint;
   } catch (error) {
-    // If TypeScript parser fails, return empty fingerprint
-    // This prevents crashes on non-TS code
     console.warn('AST analysis failed:', error);
     return {};
   }

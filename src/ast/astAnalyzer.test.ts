@@ -1,5 +1,3 @@
-// vscode-extension/src/ast/astAnalyzer.test.ts
-
 import { generateASTFingerprint, sanitizeFingerprint } from './astAnalyzer';
 import { diffAST, classifyRefactor } from './astDiff';
 

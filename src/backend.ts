@@ -80,7 +80,7 @@ export class BackendClient {
   }
 
   /**
-   * Internal: send request and wait for response
+   * Send request and wait for response
    */
   private _sendRequest(request: any): Promise<BackendResponse> {
     return new Promise((resolve, reject) => {
@@ -99,7 +99,7 @@ export class BackendClient {
   }
 
   /**
-   * Internal: process stdout line by line
+   * Process stdout line by line
    */
   private _processOutput() {
     const lines = this.buffer.split('\n');

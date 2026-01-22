@@ -1,4 +1,3 @@
-// vscode-extension/src/ui/feedbackPanel.ts
 import * as vscode from 'vscode';
 
 export interface PedagogicalFeedback {

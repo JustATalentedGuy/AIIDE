@@ -1,5 +1,3 @@
-// vscode-extension/src/ast/astDiff.ts
-
 import { ASTFingerprint } from './astAnalyzer';
 
 export interface ASTDiffResult {
@@ -54,7 +52,7 @@ export function diffAST(
 
   return {
     structuralChangeScore,
-    majorChange: structuralChangeScore >= 0.25, // Calibrated threshold
+    majorChange: structuralChangeScore >= 0.25, // Threshold
     details: {
       addedNodes: added,
       removedNodes: removed,

@@ -1,4 +1,4 @@
-# 🧠 AI Learning Coach IDE
+# 🧠 AI-IDE
 
 > **An AI-augmented VS Code extension that observes *how* you code and gives pedagogical feedback — not solutions.**
 
@@ -206,6 +206,7 @@ Open Command Palette (`Ctrl + Shift + P`):
 * **AI Learning IDE: Reset Session**
 * **AI Learning IDE: Show Problem**
 
+![Commands usage](usage.png)
 ---
 
 ## 🛠️ Troubleshooting

@@ -1,8 +1,3 @@
-"""
-AI Coach Agent - FULL LLM VERSION with Real Feedback
-Integrates: signal_processor → llm_orchestrator → feedback output
-"""
-
 import sys
 import json
 import os
