@@ -4,3 +4,4 @@ node_modules/
 dist/
 python-agent/backend/__pycache__/
 .vscodeignore
+ai-learning-ide-0.2.0.vsix
