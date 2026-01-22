@@ -1,0 +1,110 @@
+{
+  "name": "ai-learning-ide",
+  "displayName": "AI Learning Coach",
+  "description": "AI-augmented learning IDE for competitive programming and DSA with pedagogical feedback",
+  "version": "0.2.0",
+  "publisher": "ai-learning",
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": [
+    "Education",
+    "Debuggers",
+    "Other"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "aiLearningIDE.pasteProblem",
+        "title": "AI Coach: Paste Problem Context",
+        "icon": "$(clippy)"
+      },
+      {
+        "command": "aiLearningIDE.requestFeedback",
+        "title": "AI Coach: Request Feedback",
+        "keybinding": "ctrl+shift+a",
+        "icon": "$(lightbulb)"
+      },
+      {
+        "command": "aiLearningIDE.resetSession",
+        "title": "AI Coach: Reset Session",
+        "icon": "$(refresh)"
+      },
+      {
+        "command": "aiLearningIDE.showProblem",
+        "title": "AI Coach: Show Problem Context",
+        "icon": "$(book)"
+      }
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "command": "aiLearningIDE.requestFeedback",
+          "group": "1_modification",
+          "when": "resourceExtname =~ /\\.(py|js|java|cpp|c|ts|jsx|tsx)$/"
+        },
+        {
+          "command": "aiLearningIDE.pasteProblem",
+          "group": "1_modification",
+          "when": "resourceExtname =~ /\\.(py|js|java|cpp|c|ts|jsx|tsx)$/"
+        }
+      ],
+      "commandPalette": [
+        {
+          "command": "aiLearningIDE.pasteProblem"
+        },
+        {
+          "command": "aiLearningIDE.requestFeedback"
+        },
+        {
+          "command": "aiLearningIDE.resetSession"
+        },
+        {
+          "command": "aiLearningIDE.showProblem"
+        }
+      ]
+    },
+    "configuration": {
+      "title": "AI Learning Coach",
+      "properties": {
+        "aiLearningIDE.backendUrl": {
+          "type": "string",
+          "default": "http://localhost:8000",
+          "description": "URL of the Python backend service (cloud fallback)"
+        },
+        "aiLearningIDE.groqApiKey": {
+          "type": "string",
+          "default": "",
+          "description": "Groq API key for embedded agent (stored locally)"
+        }
+      }
+    },
+    "keybindings": [
+      {
+        "command": "aiLearningIDE.requestFeedback",
+        "key": "ctrl+shift+a",
+        "mac": "cmd+shift+a",
+        "when": "editorTextFocus"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "lint": "eslint src --ext ts"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/vscode": "^1.80.0",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "eslint": "^8.50.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.0"
+  }
+}
